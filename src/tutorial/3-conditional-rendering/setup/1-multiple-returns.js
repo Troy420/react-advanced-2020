@@ -10,8 +10,10 @@ const MultipleReturns = () => {
 
     if (response.status >= 200 && response.status < 299) {
       const users = await response.json();
+
       const { login } = users;
       setUsers(login);
+
       setIsLoading(false);
     } else {
       setIsLoading(false);
